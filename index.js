@@ -8,21 +8,21 @@
 
 
 let homeScore = 0
-let guestScore = 0
+let awayScore = 0
 
 function newGame() {
     homeScore = 0
     updateHome()
-    guestScore = 0
-    updateGuest()
+    awayScore = 0
+    updateAway()
 }
 
 function updateLeader() {
     let leader = document.getElementById("vsEl")
     
-    if(homeScore < guestScore){
+    if(homeScore < awayScore){
         leader.textContent = "VS>"
-    } else if(homeScore > guestScore){
+    } else if(homeScore > awayScore){
         leader.textContent = "<VS"
     } else{
         leader.textContent = "VS"
@@ -34,8 +34,8 @@ function updateHome() {
     updateLeader()
 }
 
-function updateGuest() {
-    document.getElementById("guestScoreEl").textContent = guestScore
+function updateAway() {
+    document.getElementById("awayScoreEl").textContent = awayScore
     updateLeader()
 }
 
@@ -54,18 +54,18 @@ function addHome3() {
     updateHome()
 }
 
-function addGuest1() {
-    guestScore += 1
-    updateGuest()
+function addAway1() {
+    awayScore += 1
+    updateAway()
 }
 
-function addGuest2() {
-    guestScore += 2
-    updateGuest()
+function addAway2() {
+    awayScore += 2
+    updateAway()
 }
 
-function addGuest3() {
-    guestScore += 3
-    updateGuest()
+function addAway3() {
+    awayScore += 3
+    updateAway()
 }
 
